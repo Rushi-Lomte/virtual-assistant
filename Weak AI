@@ -93,14 +93,14 @@ def tellTime():
 	print(time)
 	hour = time[11:13]
 	min = time[14:16]
-	speak(self, "The time is sir" + hour + "Hours and" + min + "Minutes")
+	speak("The time is sir" + hour + "Hours and" + min + "Minutes")
 
 def Hello():
 	
 	# This function is for when the assistant
 	# is called it will say hello and then
 	# take query
-	speak("hello sir I am your desktop assistant. / Tell me how may I help you")
+	speak("hello sir I am your desktop assistant. Tell me how may I help you")
 		
 
 
@@ -121,16 +121,8 @@ def Take_query():
 		# query matches and we get the perfect
 		# output
 		query = takeCommand().lower()
-		if "open geeksforgeeks" in query:
-			speak("Opening GeeksforGeeks ")
-			
-			# in the open method we just to give the link
-			# of the website and it automatically open
-			# it in your default browser
-			webbrowser.open("www.geeksforgeeks.com")
-			continue
 		
-		elif "open google" in query:
+		if "open google" in query:
 			speak("Opening Google ")
 			webbrowser.open("www.google.com")
 			continue
